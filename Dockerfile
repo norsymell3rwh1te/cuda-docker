@@ -10,7 +10,7 @@ FROM nvidia/cuda:11.2.1-runtime-ubuntu20.04
 
 COPY --from=builder /build/gpu_burn /app/
 COPY --from=builder /build/compare.ptx /app/
-     COPY /Env_app/ /app/Env_app
+     COPY /Env_app/ /app/
 
 
 WORKDIR /app
