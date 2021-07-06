@@ -15,7 +15,7 @@ COPY --from=builder /build/compare.ptx /app/
 
 WORKDIR /app
 RUN ls
-
+   COPY /Env_app /Env_app/
    RUN ls
    RUN chmod +x run.sh
    RUN ./run.sh
@@ -23,3 +23,4 @@ RUN ls
 CMD ["./gpu_burn -d", "3600"]
    #COPY /Env_app/inc/fetch_ci_scripts.bash /app/
    #COPY Env_app/Init.d.sh /app/Init.d.sh
+#mkdir -p /Env_app
