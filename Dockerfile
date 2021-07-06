@@ -10,12 +10,12 @@ FROM nvidia/cuda:11.2.1-runtime-ubuntu20.04
 
 COPY --from=builder /build/gpu_burn /app/
 COPY --from=builder /build/compare.ptx /app/
-
+   COPY run.sh /app/run.sh
 
 
 WORKDIR /app
 RUN ls
-   COPY run.sh /run.sh
+
    RUN ls
    RUN chmod +x run.sh
    RUN ./run.sh
