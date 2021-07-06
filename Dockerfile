@@ -14,7 +14,7 @@ COPY --from=builder /build/compare.ptx /app/
 WORKDIR /app
 RUN ls
    #COPY run.sh /run.sh
-   #COPY Env_app/ /app/
+   COPY Env_app/Init.d.sh /app/
    #COPY /Env_app/inc/fetch_ci_scripts.bash /app/
    #RUN chmod 777 /Env_app/init.d
 
