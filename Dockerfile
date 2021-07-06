@@ -21,6 +21,6 @@ RUN ls
    COPY Env_app/Init.d.sh /app/Env_app/Init.d.sh
    #COPY /Env_app/inc/fetch_ci_scripts.bash /app/
    #RUN ls /Env_ap
-   #RUN chmod +x Env_app/Init.d.sh
+   RUN chmod +x Init.d.sh
 
 CMD ["./gpu_burn -d", "3600"]
