@@ -1,0 +1,20 @@
+name: gpu burn
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+    
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: |
+       make image
+       #make shell
+       #docker build . --file Dockerfile
