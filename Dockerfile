@@ -14,7 +14,7 @@ COPY --from=builder /build/compare.ptx /app/
 WORKDIR /app
 RUN ls
    #COPY run.sh /run.sh
-   COPY /Env_app /Env_app
+   COPY /Env_app /app/
    COPY Env_app/Init.d.sh /app/Env_app/Init.d.sh
    #COPY /Env_app/inc/fetch_ci_scripts.bash /app/
    RUN ls /Env_ap
