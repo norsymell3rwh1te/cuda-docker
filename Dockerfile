@@ -12,12 +12,12 @@ COPY --from=builder /build/gpu_burn /app/
 COPY --from=builder /build/compare.ptx /app/
    COPY run.sh /app/run.sh
    #COPY /Env_app /app/Env_app/
-
+   RUN mkdir -p /app/Env_app
 WORKDIR /app
 
 RUN ls
    #COPY /Env_app /Env_app/
-   RUN mkdir -p /Env_app
+   COPU run.sh /Env_app/run.sh
    RUN cd /Env_app
    RUN ls
    RUN chmod +x run.sh
