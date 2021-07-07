@@ -1,5 +1,5 @@
 echo "≠========== this run.sh ==========="
-cd /Env_app
+cd /dor
 ls
 #chmod 777 run.sh && ./run.sh
 
