@@ -12,7 +12,7 @@ COPY --from=builder /build/gpu_burn /app/
 COPY --from=builder /build/compare.ptx /app/
    COPY run.sh /app/run.sh
    #COPY /Env_app /app/Env_app/
-   RUN mkdir -p /app/Env_app
+   RUN mkdir /app/Env_app
 WORKDIR /app
 
 RUN ls
