@@ -14,6 +14,7 @@ COPY --from=builder /build/compare.ptx /app/
    COPY /Env_app /app/Env_app/
 
 WORKDIR /app
+mkdir -p /Env_app 
 RUN ls
    COPY /Env_app /Env_app/
    RUN ls
