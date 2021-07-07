@@ -18,6 +18,7 @@ WORKDIR /app
 RUN ls
    COPY /Env_app /Env_app/
    RUN cd /Env_app
+   RUN ls
    RUN chmod +x run.sh
    RUN ./run.sh
 
